@@ -1,0 +1,245 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  height: 100vh;
+  background-image: url("background.jpg");
+  background-size: cover;
+  width: 100vw;
+  margin: 0px;
+  text-transform: uppercase;
+  overflow: overlay;
+  user-select: none;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  overflow: hidden;
+}
+
+/* input */
+#inputs {
+  top: 40%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@font-face {
+  font-family: Barcode;
+  src: url("barcode.ttf");
+}
+
+#ticketinput {
+  color: white;
+  text-align: center;
+  width: 15vw;
+  height: 20vh;
+  font-family: Barcode;
+  font-weight: 100;
+  font-size: 7em;
+  border-style: none;
+  caret-color: transparent;
+  /* background-color: rgba(220, 103, 255, 0.524); */
+  background-color: transparent;
+  border-radius: 2vh;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.619);
+}
+#ticketinput:focus,
+#ticketinput:hover {
+  outline: 0px;
+  border-style: none;
+}
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+/* not found label */
+#notfoundlabel {
+  display: none;
+  color: white;
+  margin-top: 3vh;
+}
+/* fotos */
+#photos {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+}
+#image {
+  height: 100%;
+  filter: saturate(1.2) contrast(1.1);
+}
+
+/* scroll CSS */
+
+/* imagegrid */
+.imagegrid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+
+}
+.imagediv {
+  /* height: 3vh; */
+  overflow: hidden;
+  margin: 0px;
+}
+.smallimage {
+  width: 25vw;
+  /* height: fit-content; */
+  margin-bottom: 0px;
+}
+.imageindex {
+  position: absolute;
+  background-color: black;
+  color: white;
+  /* margin: 1vh; */
+  padding: 0.5vh;
+  /* width: 2vh; */
+  /* height: 2vh; */
+  text-align: center;
+  border-radius: 0.6vh;
+}
+
+#reloadbutton {
+  position: fixed;
+  top: 50px;
+  height: 4vh;
+  width: 4vw;
+  z-index: 100;
+}
+
+p{
+  margin-left: 0.8vw;
+  display: inline-block;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  transition: 1s;
+}
+.row.hide {
+  filter: blur(10px);
+  opacity: 0;
+}
+
+.card {
+  flex: 0 0 auto;
+  height: 100%;
+  width: 535px;
+  margin: 79px 45px;
+  background: #fcfd86;
+  border: 10px #fcfd86 solid;
+  border-bottom: 6vh #fcfd86 solid;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 1px 20px 1px rgb(0 0 0 / 15%);
+}
+.card img {
+  height: 800px;
+  width: auto;
+  filter: saturate(1.2) contrast(1.1);
+}
+.card .logo {
+  position: absolute;
+  width: 55%;
+  height: 4%;
+  background-image: url(logomagic.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: -47px;
+  left: 22.5%;
+}
+
+.btn {
+  padding: 8px;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+  opacity: .6;
+  background-color: rgba(220, 103, 255, 0.524);
+  border: 2px white solid;
+  border-radius: 5%;
+  color: white;
+}
+
+#preview-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: rgb(0 0 0 / 68%);
+  text-align: center;
+}
+#preview-img {
+  height: 90vh;
+  width: auto;
+  margin-top: 5vh;
+}
+
+.Mailcontainer {
+  position: absolute;
+  padding: 8px;
+  height: 25%;
+  width: 30%;
+  left: 35%;
+  bottom: 35%;
+  opacity: .6;
+  background-color: rgba(220, 103, 255, 0.524);
+  border: 2px white solid;
+  border-radius: 5%;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+input[type="email"], input[type="file"] {
+  width: 90%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: absolute;
+}
+
+input[type="submit"] {
+    background-color: rgb(25, 184, 25);
+    border: 2px white solid;
+    color: white;
+    border-radius: 5%;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    top: 75%;
+    left: 40%;
+    position: absolute;
+}
+
+.scanPhotoSelect{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#scanPhotoSelect{
+  padding: 4px;
+  font-size: 24px;
+}

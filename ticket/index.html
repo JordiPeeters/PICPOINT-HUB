@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+
+    <title>Ticket Scanner</title>
+</head>
+
+<body style="justify-content: center;display: flex; ">
+    
+    <div id="inputs">
+        <input onblur="this.focus()" id="ticketinput" type="text" placeholder="" class="search"
+            onkeydown="enter(this)" autofocus>
+        <label id="notfoundlabel">foto niet gevonden</label>
+    </div>
+    <div id="photos">
+        <img id="image">
+    </div>
+    
+    <button class="btn" style="bottom: 30%" onclick="pressEsc()">Reset</button>
+    <button class="btn" onclick="PrintImage()">Print</button>
+    <button class="btn" style="bottom: 10%" onclick="askDelete()">Start-of-day</button> 
+
+</body>
+<script src="../script.js"></script>
+
+</html>
